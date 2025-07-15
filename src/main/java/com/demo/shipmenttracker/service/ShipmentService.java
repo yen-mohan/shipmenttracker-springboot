@@ -22,7 +22,7 @@ public class ShipmentService {
         this.kafka = kafka;
     }
 
-    @Cacheable(value = "shipments" , key = "#id")
+//    @Cacheable(value = "shipments" , key = "#id")
     public Shipment getShipment(String id){
         System.out.println("🔍 Fetching shipment from DB for ID: " + id);
         return repo.findById(id).orElse(null);
